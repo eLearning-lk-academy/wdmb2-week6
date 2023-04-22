@@ -1,42 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        div{
-            margin: 20px;
-            border-bottom:5px solid red
-        }
+      div {
+        margin: 20px;
+        border-bottom: 5px solid red;
+      }
     </style>
-</head>
-<body>
-    <div id="div1" >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo enim ab similique aliquam nam praesentium incidunt deleniti veritatis, officiis, aperiam maxime dolor ex minus corrupti. Necessitatibus autem dignissimos aut laborum?
-
+  </head>
+  <body>
+    <div id="div1">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo enim ab
+      similique aliquam nam praesentium incidunt deleniti veritatis, officiis,
+      aperiam maxime dolor ex minus corrupti. Necessitatibus autem dignissimos
+      aut laborum?
     </div>
     <div class="para">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus obcaecati laborum fugiat aliquid facere, ad velit sit architecto dolores. Ipsum nobis labore accusamus reprehenderit ex dolor ipsam quasi animi non?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+      obcaecati laborum fugiat aliquid facere, ad velit sit architecto dolores.
+      Ipsum nobis labore accusamus reprehenderit ex dolor ipsam quasi animi non?
     </div>
     <div id="div3" class="para">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus provident nulla, cumque accusantium dolore ab ut quas labore, velit voluptatum sunt? Dolore suscipit qui numquam nostrum odit fugiat consectetur fuga?
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus provident
+      nulla, cumque accusantium dolore ab ut quas labore, velit voluptatum sunt?
+      Dolore suscipit qui numquam nostrum odit fugiat consectetur fuga?
     </div>
-    <input name="email" type="email">
+
+    <input name="email" type="email" />
+
+    <br />
+    <button onclick="document.write('Hello from document write')">
+      doc write
+    </button>
+    <br />
     <script>
-        console.log(document.getElementById('div1'))
-        console.log(document.getElementsByClassName('para'))
-        console.log(document.getElementsByClassName('para')[0])
-        console.log(document.getElementsByTagName('div'))
-        console.log(document.getElementsByName('email'))
+      console.log(123);
 
+      window.alert("Hello");
 
-        console.log(document.querySelector('#div1'))
-        console.log(document.querySelector('div'))
-        console.log(document.querySelectorAll('.para'))
-        console.log(document.querySelector('div.para'))
+	//   this is a comment
+	/*
+	This is multi line 
+	comment
+	*/
 
+      document.querySelector("#div1").innerHTML = 
+	  "Hello";
+
+      document.write("Hello from document write");
     </script>
-</body>
+  </body>
 </html>
