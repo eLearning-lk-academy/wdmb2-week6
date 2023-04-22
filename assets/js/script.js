@@ -1,30 +1,49 @@
-//arithmetic operators
-let num1 = 5
-let num2 = 10
-let num3 = 11
+//assignment operators
+let num1 = 10;
+let num2 = 20;
+let num3 = 30;
 
-let add = num1 + num2 + num3
-console.log('Add',add)
+// num3 = num3 + num1;
+num3 += num1;
+console.log(num3);
 
-let sub = num2 - num1
-console.log('Sub',sub)
 
-let mul = num1 * num2
-console.log('Mul',mul)
+///functions
 
-let div = num2 / num1
-console.log('Div',div)
+function fun1(name) {
+    console.log("Hello " + name);
+}
+fun1('Nuwan');
 
-let mod = num3 % num1
-console.log('Modulus',mod)
+function celsiusToFahrenheit(val){
+    let out = val*9;
+    out /=5;
+    out += 32;
+    // console.log(out);
+    return out
+    console.log('ddd')
+}
 
-let exp = num1 ** num2
-console.log('Exponent',exp)
+function convertAndOutput(){
+    let out = document.querySelector('#out')
+    // console.log(celsiusToFahrenheit(temp.innerHTML));
+    out.innerHTML = celsiusToFahrenheit(temp.innerHTML)
+}
 
-let inc = num1++
-console.log('Increment',inc)
-console.log('Incremented number',num1)
+const convertBtn = document.querySelector('#convert')
+const temp = document.querySelector('#temp')
 
-let dec = --num2
-console.log('Decrement',dec)
-console.log('Decremented number',num2)
+convertBtn.addEventListener('click',convertAndOutput)
+
+const input =document.querySelector('#temp-input')
+
+input.addEventListener('keyup', function () {
+    let out = celsiusToFahrenheit(this.value)
+    document.getElementById('in-out').innerHTML =out
+})
+
+input.addEventListener('change', function (){
+    let out = celsiusToFahrenheit(this.value)
+    window.alert(this.value+' in fahrenheit is '+out )
+})
+
