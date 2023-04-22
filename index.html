@@ -19,7 +19,7 @@
       aperiam maxime dolor ex minus corrupti. Necessitatibus autem dignissimos
       aut laborum?
     </div>
-    <div class="para">
+    <div id="div2" class="para">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
       obcaecati laborum fugiat aliquid facere, ad velit sit architecto dolores.
       Ipsum nobis labore accusamus reprehenderit ex dolor ipsam quasi animi non?
@@ -33,25 +33,27 @@
     <input name="email" type="email" />
 
     <br />
-    <button onclick="document.write('Hello from document write')">
-      doc write
-    </button>
-    <br />
     <script>
-      console.log(123);
+		/*var
+		let 
+		const*/
 
-      window.alert("Hello");
+		const paraOne = document.getElementById('div1');
 
-	//   this is a comment
-	/*
-	This is multi line 
-	comment
-	*/
+		// let message = "Hello world";
+		let message;
 
-      document.querySelector("#div1").innerHTML = 
-	  "Hello";
+		message = 'Hello Nuwan';
 
-      document.write("Hello from document write");
+		paraOne.innerHTML = message;
+		// document.getElementById('div1').innerHTML ="Hello world";
+
+		
+		var paraTwo;
+		paraTwo = document.getElementById('div2');
+		console.log(paraTwo);
+		var paraTwo = 'hhh';
+		console.log(paraTwo);
     </script>
   </body>
 </html>
